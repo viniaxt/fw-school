@@ -19,8 +19,8 @@ var defer = new Promise((resolve, reject) => {
 // when finished, do something
 defer
   .then((data) => {
-    console.log(data)
+    console.log(`data => ${data}`) // print => hello, it works
     return 'foo';
   })
-  .then((data) => console.log(data)) // receive data from the first then ('foo')
+  .then((data) => console.log(data)) // print => foo
   .catch((err) => console.log(err))
